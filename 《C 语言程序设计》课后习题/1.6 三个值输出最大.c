@@ -5,7 +5,9 @@ int main()
     printf("Please enter three numbers(use gap to split number):\n");
     int a, b, c, max;
     scanf("%d %d %d", &a, &b, &c);
+
     max = a;
+
     if(max < b)
     {
         max = b;
@@ -14,6 +16,8 @@ int main()
     {
         max = c;
     }
+
     printf("MAX = %d", max);
+
     return 0;
 }
