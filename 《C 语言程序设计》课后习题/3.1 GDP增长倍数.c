@@ -5,9 +5,9 @@
 #include<math.h>
 int main()
 {
-    double r=0.1,n=10;
+    double r = 0.1, n = 10;
     double p;
-    p=pow((1+r),n);
-    printf("Increased %.2lf %%",p*100);
+    p = pow((1 + r), n);
+    printf("Increased %.2lf %%", p * 100);
     return 0;
 }
