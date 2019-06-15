@@ -6,19 +6,21 @@
 #include<math.h>
 int main()
 {
-    double x,y;
+    double x, y;
     double r;
     printf("Enter site x,y value:\n");
-    printf("x=?\n");
-    scanf("%lf",&x);printf("x value:%lf\n",x);
-    printf("y=?\n");
-    scanf("%lf",&y);printf("y value:%lf\n",y);
+    printf("x = ?\n");
+    scanf("%lf", &x);
+    printf("x value: %lf\n", x);
+    printf("y = ?\n");
+    scanf("%lf", &y);
+    printf("y value: %lf\n", y);
 
-    r=pow((2-fabs(y)),2)+pow((2-fabs(x)),2);
-    r=sqrt(r);
-    printf("\nr=%lf\n",r);
+    r = pow((2 - fabs(y)), 2) + pow((2 - fabs(x)), 2);
+    r = sqrt(r);
+    printf("\nr=%lf\n", r);
 
-    if(pow((2-fabs(y)),2)+pow((2-fabs(x)),2)>1)
+    if(pow((2 - fabs(y)), 2) + pow((2 - fabs(x)), 2) > 1)
     {
         printf("\nHeight:0 M\n");
     }
