@@ -11,79 +11,82 @@
 #include<stdio.h>
 int main()
 {
-    int n,step,i,j;
+    int n, step, i, j;
     printf("Enter n: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
     int num[n][n];
     putchar('\n');
-    for(i=0;i<n;i++)
+
+    for(i = 0; i < n; i++)
     {
-        for(j=0;j<n;j++)
+        for(j = 0; j < n; j++)
         {
-            num[i][j]=0;
+            num[i][j] = 0;
         }
     }
+
     //按规则转写成代码。
-    i=0; //第一条件
-    j=n/2;
-    num[i][j]=1;
-    for(step=2;step<=n*n;step++)
+    i = 0; //第一条件
+    j = n / 2;
+    num[i][j] = 1;
+    for(step = 2; step <= n * n; step++)
     {
-        if(i!=0 && j!=(n-1) && (i!=0 && j!=(n-1))) //第二条件
+        if(i != 0 && j != (n - 1) && (i != 0 && j != (n - 1))) //第二条件
         {
-            if(num[i-1][j+1]!=0 || (i==0 && j==(n-1)))  //第五条件
+            if(num[i - 1][j + 1] != 0 || (i == 0 && j == (n - 1)))  //第五条件
             {
-                num[i+1][j]=step;
-                i=i+1;
+                num[i + 1][j] = step;
+                i = i + 1;
             }
             else
             {
-                num[i-1][j+1]=step;
-                i=i-1; //更新行列值。
-                j=j+1;
+                num[i - 1][j + 1] = step;
+                i = i - 1; //更新行列值。
+                j = j + 1;
             }
             continue;
 
         }
-        else if(i==0) //第三条件
+        else if(i == 0) //第三条件
         {
-            if(num[n-1][j+1]!=0 || (i==0 && j==(n-1)))  //第五条件
+            if(num[n - 1][j + 1] != 0 || (i == 0 && j == (n - 1)))  //第五条件
             {
-                num[i+1][j]=step;
-                i=i+1;
+                num[i + 1][j] = step;
+                i = i + 1;
             }
             else
             {
-                num[n-1][j+1]=step;
-                i=n-1;
-                j=j+1;
+                num[n - 1][j + 1] = step;
+                i = n - 1;
+                j = j + 1;
             }
             continue;
         }
-        else if(j==(n-1)) //第四条件
+        else if(j == (n - 1)) //第四条件
         {
-            if(num[i-1][0]!=0 || (i==0 && j==(n-1)))  //第五条件
+            if(num[i - 1][0] != 0 || (i == 0 && j == (n - 1)))  //第五条件
             {
-                num[i+1][j]=step;
-                i=i+1;
+                num[i + 1][j] = step;
+                i = i + 1;
             }
             else
             {
-                num[i-1][0]=step;
-                i=i-1;
-                j=0;
+                num[i - 1][0] = step;
+                i = i - 1;
+                j = 0;
             }
             continue;
         }
     }
 
-    for(i=0;i<n;i++)
+    for(i = 0; i < n; i++)
     {
-        for(j=0;j<n;j++)
+        for(j = 0; j < n; j++)
         {
-            printf("%3d",num[i][j]);
+            printf("%3d", num[i][j]);
         }
         printf("\n");
     }
+
     return 0;
 }
