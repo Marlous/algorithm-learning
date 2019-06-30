@@ -13,8 +13,9 @@ int main()
 void yuan(char str[])
 {
     char shu[N];
-    int i=0,j=0;
-    while(str[i]!='\0')
+    int i = 0, j = 0;
+
+    while(str[i] != '\0')
     {
         switch(str[i])
         {
@@ -22,12 +23,16 @@ void yuan(char str[])
             case 'e':
             case 'i':
             case 'o':
-            case 'u':shu[j]=str[i];j++;break;
-            default:break;
+            case 'u':
+                shu[j] = str[i];
+                j++;
+                break;
+            default:
+                break;
         }
         i++;
     }
-    shu[j]='\0';
+    shu[j] = '\0';
 
-    printf("\n%s\n",shu);
+    printf("\n%s\n", shu);
 }
