@@ -3,6 +3,7 @@ void convert(int n);
 int main()
 {	int num;
     scanf("%d", &num);
+
     if (num < 0)
     {
         printf("-");
@@ -10,6 +11,7 @@ int main()
     }
     convert(num);
     printf("\n");
+
     return 0;
 }
 
