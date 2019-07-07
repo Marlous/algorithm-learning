@@ -1,5 +1,5 @@
-#include"head.h"
-void main()
+#include<stdio.h>
+int main()
 {
     int b[10]={1,2,3,4,5,6,912,-12,2,3};
 	int i=0,max,min;
