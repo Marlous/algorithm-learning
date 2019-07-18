@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
-#define N 10 
-void main()
+#define N 10
+int main()
 {
 	int a[N];
 	int i=0,j,k,d;
