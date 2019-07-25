@@ -12,7 +12,7 @@ int main()
 
     while(i <= num)
     {
-        n = n1 + n2;
+        n = n1 + n2; // 计算出此项（大于 3）
         sum = sum + n;
         n1 = n2;
         n2 = n;
